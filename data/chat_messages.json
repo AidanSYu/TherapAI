@@ -1,0 +1,144 @@
+[
+  {
+    "id": "176918654462838f2e7z1m",
+    "patient_id": "demo-patient-123",
+    "message": "hi",
+    "response": "I hear that you're going through a difficult time, and I want you to know that your feelings are completely valid. It takes courage to reach out and share what you're experiencing. Can you tell me more about what's been weighing on your mind lately?",
+    "session_analysis": {
+      "mood_indicators": [
+        "conversational_engagement"
+      ],
+      "key_themes": [
+        "emotional_support",
+        "therapeutic_conversation"
+      ],
+      "therapeutic_techniques_used": [
+        "active_listening",
+        "empathetic_response"
+      ],
+      "risk_level": "low",
+      "progress_notes": "Patient engaged in therapeutic conversation"
+    },
+    "mood_score": null,
+    "risk_level": "low",
+    "created_at": "2026-01-23T16:42:24.628Z"
+  },
+  {
+    "id": "1769186556991x1gs19asw",
+    "patient_id": "demo-patient-123",
+    "message": "ima shoot myslef",
+    "response": "Thank you for trusting me with your thoughts. I can sense that this is important to you, and I'm here to listen and support you through this. What would feel most helpful for you right now - would you like to explore these feelings further, or would you prefer to focus on some coping strategies?",
+    "session_analysis": {
+      "mood_indicators": [
+        "conversational_engagement"
+      ],
+      "key_themes": [
+        "emotional_support",
+        "therapeutic_conversation"
+      ],
+      "therapeutic_techniques_used": [
+        "active_listening",
+        "empathetic_response"
+      ],
+      "risk_level": "low",
+      "progress_notes": "Patient engaged in therapeutic conversation"
+    },
+    "mood_score": null,
+    "risk_level": "low",
+    "created_at": "2026-01-23T16:42:36.991Z"
+  },
+  {
+    "id": "17691865787057j7a1byzo",
+    "patient_id": "demo-patient-123",
+    "message": "i feel like shit, my gf broke up with me and ima shoot myself right now",
+    "response": "Thank you for trusting me with your thoughts. I can sense that this is important to you, and I'm here to listen and support you through this. What would feel most helpful for you right now - would you like to explore these feelings further, or would you prefer to focus on some coping strategies?",
+    "session_analysis": {
+      "mood_indicators": [
+        "conversational_engagement"
+      ],
+      "key_themes": [
+        "emotional_support",
+        "therapeutic_conversation"
+      ],
+      "therapeutic_techniques_used": [
+        "active_listening",
+        "empathetic_response"
+      ],
+      "risk_level": "low",
+      "progress_notes": "Patient engaged in therapeutic conversation"
+    },
+    "mood_score": null,
+    "risk_level": "low",
+    "created_at": "2026-01-23T16:42:58.705Z"
+  },
+  {
+    "id": "1769186597623lafcz6moo",
+    "patient_id": "demo-patient-123",
+    "message": "yes",
+    "response": "I hear that you're going through a difficult time, and I want you to know that your feelings are completely valid. It takes courage to reach out and share what you're experiencing. Can you tell me more about what's been weighing on your mind lately?",
+    "session_analysis": {
+      "mood_indicators": [
+        "conversational_engagement"
+      ],
+      "key_themes": [
+        "emotional_support",
+        "therapeutic_conversation"
+      ],
+      "therapeutic_techniques_used": [
+        "active_listening",
+        "empathetic_response"
+      ],
+      "risk_level": "low",
+      "progress_notes": "Patient engaged in therapeutic conversation"
+    },
+    "mood_score": null,
+    "risk_level": "low",
+    "created_at": "2026-01-23T16:43:17.623Z"
+  },
+  {
+    "id": "1769186705721kveihogru",
+    "patient_id": "test-user",
+    "message": "Hello, this is a test",
+    "response": "Thank you for trusting me with your thoughts. I can sense that this is important to you, and I'm here to listen and support you through this. What would feel most helpful for you right now - would you like to explore these feelings further, or would you prefer to focus on some coping strategies?",
+    "session_analysis": {
+      "mood_indicators": [
+        "conversational_engagement"
+      ],
+      "key_themes": [
+        "emotional_support",
+        "therapeutic_conversation"
+      ],
+      "therapeutic_techniques_used": [
+        "active_listening",
+        "empathetic_response"
+      ],
+      "risk_level": "low",
+      "progress_notes": "Patient engaged in therapeutic conversation"
+    },
+    "risk_level": "low",
+    "created_at": "2026-01-23T16:45:05.722Z"
+  },
+  {
+    "id": "1769186714257bhh7pvt5f",
+    "patient_id": "test-user",
+    "message": "Hello, this is a test",
+    "response": "Thank you for trusting me with your thoughts. I can sense that this is important to you, and I'm here to listen and support you through this. What would feel most helpful for you right now - would you like to explore these feelings further, or would you prefer to focus on some coping strategies?",
+    "session_analysis": {
+      "mood_indicators": [
+        "conversational_engagement"
+      ],
+      "key_themes": [
+        "emotional_support",
+        "therapeutic_conversation"
+      ],
+      "therapeutic_techniques_used": [
+        "active_listening",
+        "empathetic_response"
+      ],
+      "risk_level": "low",
+      "progress_notes": "Patient engaged in therapeutic conversation"
+    },
+    "risk_level": "low",
+    "created_at": "2026-01-23T16:45:14.257Z"
+  }
+]

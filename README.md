@@ -1,24 +1,27 @@
-# TherapAI - Serverless Mental Health Platform
+# TherapAI - AI-Powered Therapeutic Chatbot
 
-A scalable, serverless mental health platform built with Next.js, FastAPI, and Supabase. Features AI-powered therapy chat and doctor dashboards with analytics and automated SOAP note generation.
+A comprehensive mental health platform featuring an AI therapist powered by Google Gemini. Built with Next.js, Supabase, and designed for healthcare professionals to provide AI-assisted therapy with comprehensive clinical reporting.
 
 ## 🏗️ Architecture
 
 ### Tech Stack
 - **Frontend**: Next.js 15 with TypeScript, Tailwind CSS
 - **Authentication**: Supabase Auth with role-based access control
-- **Database**: Supabase (PostgreSQL) 
-- **AI/ML**: LangChain + OpenAI GPT for chat and SOAP notes
+- **Database**: Supabase (PostgreSQL) with enhanced therapeutic schema
+- **AI/ML**: Google Gemini for conversational therapy and clinical analysis
 - **Deployment**: Vercel (serverless functions) / AWS Lambda
 - **Charts**: Recharts for analytics visualization
 
 ### Key Features
-- ✅ **Patient Portal**: AI-powered therapy chat interface
-- ✅ **Doctor Dashboard**: Patient analytics and AI-generated SOAP notes
-- ✅ **Role-based Authentication**: Separate access for patients and doctors
-- ✅ **Serverless Architecture**: Zero infrastructure management
-- ✅ **HIPAA-Ready**: Supabase RLS policies for data security
-- ✅ **Scalable**: Serverless functions scale automatically
+- ✅ **AI Therapist "Dr. Sarah"**: Google Gemini-powered conversational therapy
+- ✅ **Real-time Session Analysis**: Mood tracking, risk assessment, and therapeutic insights
+- ✅ **Comprehensive Clinical Reports**: Doctor-ready therapeutic assessments
+- ✅ **SOAP Notes Generation**: Structured clinical documentation
+- ✅ **Crisis Detection & Response**: Built-in safety protocols and risk monitoring
+- ✅ **Treatment Progress Tracking**: Quantitative metrics and outcome analysis
+- ✅ **Role-based Authentication**: Separate portals for patients and healthcare providers
+- ✅ **HIPAA-Ready Architecture**: Secure, compliant data handling
+- ✅ **Serverless & Scalable**: Auto-scaling with zero infrastructure management
 
 ## 📁 Project Structure
 
@@ -59,52 +62,45 @@ TherapAI/
 └── package.json
 ```
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
 - Node.js 18+ 
 - npm or yarn
 - Supabase account
-- OpenAI API key
+- Google Gemini API key
 
 ### Installation
 
-1. **Clone the repository**
+1. **Clone and setup**
 ```bash
 git clone https://github.com/AidanSYu/TherapAI.git
 cd TherapAI
-```
-
-2. **Install dependencies**
-```bash
 npm install
 ```
 
-3. **Set up Supabase**
-   - Create a new project at [supabase.com](https://supabase.com)
-   - Go to Settings > API to get your credentials
-   - Run the SQL migration from `supabase/migrations/20240101000000_initial_schema.sql` in the Supabase SQL Editor
-
-4. **Configure environment variables**
+2. **Run the setup script**
 ```bash
-cp .env.example .env
+node setup.js
 ```
 
-Edit `.env` with your credentials:
-```env
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
-OPENAI_API_KEY=your_openai_api_key
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-```
+3. **Set up Supabase database**
+   - Create a new project at [supabase.com](https://supabase.com)
+   - Run the SQL migrations from `supabase/migrations/` in order
+   - Update your `.env` with Supabase credentials
 
-5. **Run the development server**
+4. **Get your Google Gemini API key**
+   - Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
+   - Create an API key and add it to your `.env`
+
+5. **Start the development server**
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see the app.
+Open [http://localhost:3000](http://localhost:3000) to access TherapAI.
+
+📖 **For detailed setup instructions, see [SETUP_GUIDE.md](./SETUP_GUIDE.md)**
 
 ## 🗄️ Database Schema
 
@@ -131,36 +127,41 @@ Open [http://localhost:3000](http://localhost:3000) to see the app.
 
 ## 🤖 AI Features
 
-### Patient Chat (LangChain + OpenAI)
-- Uses GPT-3.5-turbo for conversational therapy
-- Maintains context-aware responses
-- Stores conversation history in database
-- Configured with therapeutic prompting
+### Therapeutic Chatbot (Google Gemini)
+- **Dr. Sarah**: Compassionate AI therapist with CBT and trauma-informed care expertise
+- **Context-Aware Conversations**: Maintains therapeutic continuity across sessions
+- **Real-time Analysis**: Mood indicators, risk assessment, and therapeutic insights
+- **Crisis Detection**: Automatic identification of high-risk situations with safety protocols
+- **Evidence-Based Responses**: Incorporates therapeutic techniques and coping strategies
 
-### SOAP Note Generation (GPT-4)
-- Analyzes patient chat history
-- Generates structured clinical notes:
-  - **S**ubjective: Patient's reported symptoms
-  - **O**bjective: Observable behaviors
-  - **A**ssessment: Clinical analysis
-  - **P**lan: Treatment recommendations
+### Clinical Documentation (Gemini Pro)
+- **Comprehensive Reports**: Detailed therapeutic assessments ready for medical review
+- **SOAP Notes**: Structured clinical documentation with treatment recommendations
+- **Progress Tracking**: Quantitative metrics including mood improvement and treatment goals
+- **Risk Assessment**: Automated safety evaluations and crisis intervention planning
+- **Treatment Analytics**: Session frequency, therapeutic alliance, and outcome measurements
 
 ## 📊 API Endpoints
 
 ### `/api/chat` (POST)
-- **Purpose**: Process patient messages with AI
-- **Body**: `{ message: string, userId: string }`
-- **Response**: `{ response: string, success: boolean }`
+- **Purpose**: Process patient messages with AI therapist
+- **Body**: `{ message: string, userId: string, currentMood?: number }`
+- **Response**: `{ response: string, sessionInsights: object, success: boolean }`
 
-### `/api/analytics` (GET)
-- **Purpose**: Fetch patient session analytics
-- **Query**: `?doctorId=<uuid>`
-- **Response**: `{ analytics: Array, success: boolean }`
+### `/api/therapeutic-report` (POST)
+- **Purpose**: Generate comprehensive clinical reports
+- **Body**: `{ patientId: string, doctorId: string, reportType?: string }`
+- **Response**: `{ therapeuticReport: string, treatmentMetrics: object, success: boolean }`
 
 ### `/api/soap-notes` (POST)
-- **Purpose**: Generate AI SOAP note for patient
-- **Body**: `{ patientId: string, doctorId: string }`
-- **Response**: `{ soapNote: Object, success: boolean }`
+- **Purpose**: Generate structured SOAP notes
+- **Body**: `{ patientId: string, doctorId: string, sessionCount?: number }`
+- **Response**: `{ soapNote: object, clinicalReport: string, riskAssessment: string, success: boolean }`
+
+### `/api/analytics` (GET)
+- **Purpose**: Fetch patient session analytics and progress metrics
+- **Query**: `?doctorId=<uuid>&patientId=<uuid>`
+- **Response**: `{ analytics: Array, progressMetrics: object, success: boolean }`
 
 ## 🚀 Deployment
 

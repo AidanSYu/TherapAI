@@ -18,29 +18,33 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Patient Portal Card */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
+          {/* Patient Portal Card - Local Version */}
           <Link
-            href="/patient"
-            className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+            href="/patient-local"
+            className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border-2 border-green-200"
           >
             <div className="flex items-center mb-4">
-              <MessageCircle className="w-12 h-12 text-blue-600 mr-4" />
-              <h2 className="text-2xl font-bold text-gray-900">Patient Portal</h2>
+              <MessageCircle className="w-12 h-12 text-green-600 mr-4" />
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900">Patient Portal</h2>
+                <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">No Setup Required</span>
+              </div>
             </div>
             <p className="text-gray-600 mb-4">
-              Access your AI-powered mental health assistant and manage your therapy sessions.
+              Access your AI-powered mental health assistant. Works immediately with local storage.
             </p>
             <ul className="space-y-2 text-sm text-gray-500">
-              <li>• Chat with AI therapist</li>
-              <li>• View session history</li>
-              <li>• Track your progress</li>
+              <li>• Chat with Dr. Sarah (AI therapist)</li>
+              <li>• Automatic mood tracking</li>
+              <li>• Session history & analytics</li>
+              <li>• Crisis detection & resources</li>
             </ul>
           </Link>
 
           {/* Doctor Dashboard Card */}
           <Link
-            href="/doctor"
+            href="/demo"
             className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
           >
             <div className="flex items-center mb-4">
@@ -48,30 +52,68 @@ export default function Home() {
               <h2 className="text-2xl font-bold text-gray-900">Doctor Dashboard</h2>
             </div>
             <p className="text-gray-600 mb-4">
-              Monitor patients, view analytics, and generate AI-powered SOAP notes.
+              Experience the clinical interface for healthcare providers.
             </p>
             <ul className="space-y-2 text-sm text-gray-500">
-              <li>• Patient analytics</li>
+              <li>• Patient analytics & reports</li>
               <li>• AI-generated SOAP notes</li>
-              <li>• Session management</li>
+              <li>• Treatment progress tracking</li>
+              <li>• Risk assessment tools</li>
             </ul>
           </Link>
         </div>
 
+        {/* Demo Link */}
+        <div className="text-center mb-8">
+          <Link
+            href="/demo"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            <Activity className="w-5 h-5 mr-2" />
+            Try Interactive Demo
+          </Link>
+          <p className="text-sm text-gray-600 mt-2">
+            Experience the interface without any setup
+          </p>
+        </div>
+
         <div className="mt-16 text-center">
-          <div className="flex items-center justify-center space-x-8 text-gray-600">
+          <div className="flex items-center justify-center space-x-8 text-gray-600 mb-4">
             <div className="flex items-center">
               <Activity className="w-6 h-6 mr-2 text-green-600" />
-              <span>Serverless Architecture</span>
+              <span>No Database Required</span>
             </div>
             <div className="flex items-center">
               <Activity className="w-6 h-6 mr-2 text-purple-600" />
-              <span>HIPAA Compliant</span>
+              <span>Local Storage</span>
             </div>
             <div className="flex items-center">
               <Activity className="w-6 h-6 mr-2 text-blue-600" />
               <span>AI-Powered</span>
             </div>
+          </div>
+          
+          <div className="flex justify-center space-x-4">
+            <a
+              href="/status"
+              className="text-sm text-gray-500 hover:text-gray-700 underline"
+            >
+              System Status
+            </a>
+            <span className="text-gray-300">•</span>
+            <a
+              href="https://github.com/AidanSYu/TherapAI"
+              className="text-sm text-gray-500 hover:text-gray-700 underline"
+            >
+              GitHub
+            </a>
+            <span className="text-gray-300">•</span>
+            <a
+              href="/SETUP_GUIDE.md"
+              className="text-sm text-gray-500 hover:text-gray-700 underline"
+            >
+              Setup Guide
+            </a>
           </div>
         </div>
       </div>
